@@ -1,7 +1,6 @@
-layout: page
-title: "The Résumé of Daniel Cook"
-permalink: /resume
-
+## DANIEL COOK - Lead Software Engineer
+### dan.c.cook@gmail.com - (1)519-373-4042
+#### randolchance.github.io
 
 # Skills
 ## Intrapersonal (group by)
