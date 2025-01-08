@@ -1,6 +1,6 @@
 ## DANIEL COOK - Lead Software Engineer
-### dan.c.cook@gmail.com - (1)519-373-4042
-#### randolchance.github.io
+### [dan.c.cook@gmail.com](mailto:dan.c.cook@gmail.com) - [(1)519-373-4042](tel:15193734042)
+#### [github.com/randolchance](https://github.com/randolchance)
 
 # Skills
 ## Intrapersonal (group by)
