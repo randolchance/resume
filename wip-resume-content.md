@@ -4,10 +4,10 @@
 ##### Port Elgin, ON Canada
 
 # Skills
-## Intrapersonal
-## Interpersonal
+## Intrapersonal (group by)
+## Interpersonal (group by)
 
-### Soft Skills
+### Soft Skills (group by)
 #### Descriptors
 - Patient
 - Tenacious
@@ -25,7 +25,7 @@
 - Rapid Iteration
 - Briefing and Debriefing
 
-### Hard Skills
+### Hard Skills (group by)
 - Languages
   - JavaScript
   - HTML/CSS
