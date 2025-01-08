@@ -152,17 +152,6 @@
 - Stan Thurger Award/Scholarship for Academic Achievement
 
 ## Relevant Work Experience
-
-### Rumble Automation (as a Technician) (Sep - Dec 2002)
-#### Junior Draftsperson and Technician
-- Drafted electrical and pneumatic schematics under tight time constraints
-- Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances
-
-### SNA Automation (as a Technician) (Jan - Aug 2005)
-#### Junior Draftsperson and Technician
-- Drafted highly-accurate electrical drawings for complex automated processes
-- Integrated an updated messaging display system for Labatt's bottling line with a bare-minimum of downtime
-
 ### KP9 Interactive (as a Software Engineer) (Oct 2018 - Present)
 #### Web Engineer
 ##### WorldCAST WebAR Studio Content Management System and User Portals
@@ -180,3 +169,13 @@
 - Conceived of, developed, iterated, and deployed various WebAR implementation strategies for drawing an augmented layer over reality without leveraging the obscene overhead of point-based solutions like SLAM or Visual Object Recognition
 - Iterated from procedural-based architecture to OOP-based as project transitioned from demo to live beta
 - Accounted for various updates in best-practices and major versions of technologies surrounding WebRTC, WebAR, GLTF/GLB and USDZ/reality
+
+### SNA Automation (as a Technician) (Jan - Aug 2005)
+#### Junior Draftsperson and Technician
+- Drafted highly-accurate electrical drawings for complex automated processes
+- Integrated an updated messaging display system for Labatt's bottling line with a bare-minimum of downtime
+
+### Rumble Automation (as a Technician) (Sep - Dec 2002)
+#### Junior Draftsperson and Technician
+- Drafted electrical and pneumatic schematics under tight time constraints
+- Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances
