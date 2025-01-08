@@ -1,3 +1,8 @@
+layout: page
+title: "The Résumé of Daniel Cook"
+permalink: /resume
+
+
 # Skills
 ## Intrapersonal (group by)
 ## Interpersonal (group by)
