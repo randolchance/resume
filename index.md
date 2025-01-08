@@ -155,19 +155,24 @@
 - Stan Thurger Award/Scholarship for Academic Achievement
 
 ## Relevant Work Experience
+
 ### KP9 Interactive (as a Software Engineer) (Oct 2018 - Present)
 #### Web Engineer
+
 ##### WorldCAST WebAR Studio Content Management System and User Portals
 - Designed and created custom CRUD solutions using Vue, Bootstrap, Flask, and MySQL using advanced querying techniques to optimise the handling of large quantities of information
 - Co-architected the WorldCAST WebAR ecosystem from the ground up leveraging three.js, CSS3D transforms, custom WebGL shaders, GLB/GLTF, USDZ/Reality, and custom filetypes
 - Learned and leveraged countless third-party packages, APIs, and documentations to create novel and proprietary WebAR solutions that work across the majority of devices and platforms
 - Researched Computer Vision mathematical foundations and optimisations: Non-linear algebra, Kalman filtering, statistical analysis of multi-variable (4D, non-linear) systems
 - Implemented a custom image-recognition solution for unlocking WebAR experiences while considering bandwidth and server limitations and costs and in addition to the standard QR-based triggering mechanism
+
 #### Lead Software Engineer
+
 ##### WorldCAST WebAR Studio Content Management System and User Portals
 - Created Studio and Portal front- and back-end APIs using PHP, Flask, nginx, and uWSGI, to interface with Stripe, SketchFab, harp.gl, and Open Street Maps APIs
 - Maintained good coding standards and practices across all verticals while marshalling a team of as many as eight (8) developers and co-op students
 - Coordinated operations and support ticket resolution with enterprise clients across the globe with professionalism and diligence, working any and all hours necessary to satisfy client and company needs
+
 ##### HelpCAST WebAR WebRTC Remote Assistance Application
 - Conceived of, developed, iterated, and deployed various WebAR implementation strategies for drawing an augmented layer over reality without leveraging the obscene overhead of point-based solutions like SLAM or Visual Object Recognition
 - Iterated from procedural-based architecture to OOP-based as project transitioned from demo to live beta
