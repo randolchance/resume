@@ -14,6 +14,7 @@
 - Effective
 - Flexible
 - Self-aware
+
 #### Capabilities
 - Leadership
 - Collaboration
