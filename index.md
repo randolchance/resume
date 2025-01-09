@@ -128,7 +128,7 @@
 
 ## Relevant Work Experience
 
-### KP9 Interactive (as a Software Engineer) (Oct 2018 - Present)
+### KP9 Interactive (Oct 2018 - Present)
 #### Web Engineer
 
 ##### WorldCAST WebAR Studio Content Management System and User Portals
@@ -150,12 +150,12 @@
 - Iterated from procedural-based architecture to OOP-based as project transitioned from demo to live beta
 - Accounted for various updates in best-practices and major versions of technologies surrounding WebRTC, WebAR, GLTF/GLB and USDZ/reality
 
-### SNA Automation (as a Technician) (Jan - Aug 2005)
+### SNA Automation (Jan - Aug 2005)
 #### Junior Draftsperson and Technician
 - Drafted highly-accurate electrical drawings for complex automated processes
 - Integrated an updated messaging display system for Labatt's bottling line with a bare-minimum of downtime
 
-### Rumble Automation (as a Technician) (Sep - Dec 2002)
+### Rumble Automation (Sep - Dec 2002)
 #### Junior Draftsperson and Technician
 - Drafted electrical and pneumatic schematics under tight time constraints
 - Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances
