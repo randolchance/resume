@@ -126,34 +126,6 @@
 
 # Education and Experience
 
-## Formal Education
-
-### University of Waterloo (Waterloo, ON)
-#### Bachelor of Science Physics - Honours and Specializations in Applied Physics and Astrophysics (2017)
-- Achieved Dean's List
-- Emphasis on labwork
-  - Hundreds of hours logged
-  - Digital circuits
-  - Analogue circuits
-  - AC circuits
-  - DC circuits
-  - Solid State components
-  - Electrical simulations
-  - LabView
-  - Chemistry
-  - Optics
-  - Crystallography
-- Emphasis on Computational Physics
-  - Completed all Computational Physics courses (3)
-  - Monte Carlo simulations
-  - Numerical approximations
-  - Computational Calculus and equation solving
-  - Creating custom algorithms with computational costs in mind (big O notation)
-
-### Sheridan College of Technology (Brampton, ON)
-#### Electromechanical Engineering Technologist Diploma - High Honours (2004)
-- Stan Thurger Award/Scholarship for Academic Achievement
-
 ## Relevant Work Experience
 
 ### KP9 Interactive (as a Software Engineer) (Oct 2018 - Present)
@@ -187,3 +159,31 @@
 #### Junior Draftsperson and Technician
 - Drafted electrical and pneumatic schematics under tight time constraints
 - Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances
+
+## Formal Education
+
+### University of Waterloo (Waterloo, ON)
+#### Bachelor of Science Physics - Honours and Specializations in Applied Physics and Astrophysics (2017)
+- Achieved Dean's List
+- Emphasis on labwork
+  - Hundreds of hours logged
+  - Digital circuits
+  - Analogue circuits
+  - AC circuits
+  - DC circuits
+  - Solid State components
+  - Electrical simulations
+  - LabView
+  - Chemistry
+  - Optics
+  - Crystallography
+- Emphasis on Computational Physics
+  - Completed all Computational Physics courses (3)
+  - Monte Carlo simulations
+  - Numerical approximations
+  - Computational Calculus and equation solving
+  - Creating custom algorithms with computational costs in mind (big O notation)
+
+### Sheridan College of Technology (Brampton, ON)
+#### Electromechanical Engineering Technologist Diploma - High Honours (2004)
+- Stan Thurger Award/Scholarship for Academic Achievement
