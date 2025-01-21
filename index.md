@@ -152,13 +152,13 @@
 
 ### SNA Automation (Jan - Aug 2005)
 #### Junior Draftsperson and Technician
-- Drafted highly-accurate electrical drawings for complex automated processes
-- Integrated an updated messaging display system for Labatt's bottling line with a bare-minimum of downtime
+- Drafted highly-accurate electrical drawings for complex automated processes 
+- Integrated an improved messaging display system for Labatt's bottling line with a bare-minimum of downtime
 
 ### Rumble Automation (Sep - Dec 2002)
 #### Junior Draftsperson and Technician
 - Drafted electrical and pneumatic schematics under tight time constraints
-- Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances
+- Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances with confidenc and accuracy
 
 ## Formal Education
 
@@ -182,7 +182,7 @@
   - Monte Carlo simulations
   - Numerical approximations
   - Computational Calculus and equation solving
-  - Creating custom algorithms with computational costs in mind (big O notation)
+  - Creating custom algorithms with computational costs in mind (e.g. big O considerations)
 
 ### Sheridan College of Technology (Brampton, ON)
 #### Electromechanical Engineering Technologist Diploma - High Honours (2004)
