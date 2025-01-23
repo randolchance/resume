@@ -182,8 +182,8 @@
   - Monte Carlo simulations
   - Numerical approximations
   - Computational Calculus and equation solving
-  - Creating custom algorithms with computational costs in mind (e.g. big O considerations)
+  - Creating custom algorithms with computational/complexity costs in mind (e.g. big O considerations)
 
-### Sheridan College of Technology (Brampton, ON)
+### Sheridan College Institute of Technology and Advanced Learning (Brampton, ON)
 #### Electromechanical Engineering Technologist Diploma - High Honours (2004)
 - Stan Thurger Award/Scholarship for Academic Achievement
