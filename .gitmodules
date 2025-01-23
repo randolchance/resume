@@ -1,0 +1,4 @@
+[submodule "vendor/three-viewport"]
+	path = vendor/three-viewport
+	url = https://github.com/randolchance/three-viewport.git
+	branch = main
