@@ -4,6 +4,28 @@ import { is } from "../../vendor/nice-things/utils";
 const { max, floor } = Math;
 
 
+const link_template = Object.assign( document.createElement('link'), {
+  type: 'text/css',
+  rel: 'stylesheet',
+} );
+
+function addCssLink( href, onLoad=null ) {
+  if (!is.string( href ) || is.empty( href )) {
+
+    throw new Error(`${ href } is not a href.`);
+
+  }
+
+  const link_element = link_template.cloneNode();
+
+  link_element.href = href;
+
+  if (is.function( onLoad )) link_element.onload = onLoad;
+
+  document.head.appendChild( link_element );
+}
+
+
 function isWhitespace( character ) {
   if (!is.string( character ) || character.length !== 1) {
 
@@ -370,6 +392,7 @@ function wrapLettersOfElementContent( element, params ) {
 }
 
 export {
+  addCssLink,
   DEFAULT_PARAMS,
   randomlyBreakUpElementContent, DEFAULT_BREAK_UP_PARAMS,
   wrapWordsOfElementContent, DEFAULT_WRAP_PARAMS,
