@@ -2,7 +2,7 @@
 ### [dan.c.cook@gmail.com](mailto:dan.c.cook@gmail.com) - [519-373-4042](tel:15193734042) - [github.com/randolchance](https://github.com/randolchance)
 ##### Port Elgin, ON Canada
 
-## Skills
+# Skills
 
 ### Soft Skills
 #### Descriptors
