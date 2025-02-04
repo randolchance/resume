@@ -27,7 +27,7 @@ window.onload = onWindowLoad
 </script>
 
 <template>
-  <main id="app">
+  <main>
     
   </main>
 </template>
