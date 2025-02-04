@@ -1,5 +1,5 @@
 import PRNG from "@/utils/prng";
-import { is } from "../../vendor/nice-things/utils";
+import { is } from "@/vendor";
 
 const { max, floor } = Math;
 

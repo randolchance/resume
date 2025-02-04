@@ -1,4 +1,4 @@
-import { is } from "../../../vendor/nice-things/utils";
+import { is } from "@/vendor";
 import { DEFAULT_PARAMS } from "../tools";
 
 

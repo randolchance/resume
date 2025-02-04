@@ -1,15 +1,12 @@
-const link = Object.assign( document.createElement('link'), {
-  href: "./effects.css",
-  type: 'text/css',
-  rel: 'stylesheet',
-} );
-document.head.appendChild( link );
-
+import { addCssLink } from './tools';
 
 export * from './selection-functions/letter-by-letter-select';
 export * from './selection-functions/paragraph-lines-select';
 export * from './selection-functions/random-letters-select';
 export * from './selection-functions/word-by-word-select';
+
+
+addCssLink('./effects.css');
 
 
 export * from './coalesce';
