@@ -4,7 +4,7 @@ import PageHeaderOption from './PageHeaderOption.vue';
 
 const options = reactive({
   HOME: {
-    
+
   }
 })
 
@@ -17,7 +17,7 @@ const options = reactive({
       :key="label"
       :details="options[ label ]"
     >
-      HOME
+      {{ label }}
     </PageHeaderOption>
   </header>
 </template>
