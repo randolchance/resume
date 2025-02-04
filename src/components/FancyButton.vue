@@ -14,8 +14,9 @@ const props = defineProps({
   },
 })
 
-const disable = ref( props.details.disable || false )
 const effect_enum = ref( props.details.effect )
+const disable = ref( props.details.disable || Boolean( props.details.effect ) )
+const focusInProps = ref( props.details.focusIn || {} )
 
 </script>
 
@@ -26,7 +27,9 @@ const effect_enum = ref( props.details.effect )
     </template>
     <template v-else>
       <template v-if="effect_enum === EFFECTS_ENUM.focusIn">
-        <FocusIn class="button-label"><slot></slot></FocusIn>
+        <FocusIn class="button-label"
+          :params="focusInProps"
+        ><slot></slot></FocusIn>
       </template>
       <!-- template v-else-if="effect_enum === EFFECTS_ENUM.focusIn">
         <FocusIn class="button-label">{{ label }}</FocusIn>

@@ -53,13 +53,13 @@ const DEFAULTS = {
 
 
 const props = defineProps({
-  details: {
+  params: {
     type: Object,
     default: DEFAULTS,
   }
 })
 
-const details = reactive( props.details )
+const params = reactive( props.params )
 
 function colorToString( colour ) {
   return `#${ colour.getHexString() }`
@@ -103,10 +103,10 @@ function createColourVectors( direction_count, centre=DEFAULTS.centreAxis, span=
   return steppedColourVectors
 }
 
-const colourHexes = computed( () => createColourHexes( details ) )
+const colourHexes = computed( () => createColourHexes( params ) )
 const startColourHexes = computed( () => colourHexes.value.at(0) )
 const colourVectors = computed( () => {
-  const { centreAxis, span } = details
+  const { centreAxis, span } = params
   return createColourVectors( startColourHexes.value.length, centreAxis, span )
 } )
 
@@ -127,7 +127,7 @@ function updateTarget( target, pointer, params ) {
 const animationTimeline = new FiniteTimeline()
 function animateElement( event ) {
 
-  const { origin } = details
+  const { origin } = params
 
   const bodyDimensions = document.body.getBoundingClientRect()
   const bodyCoordinates = new PointSpace( bodyDimensions.width, bodyDimensions.height )
@@ -180,7 +180,7 @@ function hoveringElement( event ) {
 
 function startAnimatingElement( event ) {
 
-  const { alpha, radius, blur_factor, colours } = details
+  const { alpha, radius, blur_factor, colours } = params
 
   const mainElement = event.target
   mainElement.removeEventListener( 'mouseenter', hoveringElement )
@@ -266,7 +266,7 @@ const classes = computed( () => {
       scale
       class="focus-in-layer"
 
-      v-for="i in details.colours.length"
+      v-for="i in params.colours.length"
       :element-index="i"
       :--phi="colourVectors.at( i ).at(1)"
       :--theta="colourVectors.at( i ).at(2)"
