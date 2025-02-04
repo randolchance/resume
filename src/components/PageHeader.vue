@@ -26,7 +26,9 @@ const options = reactive({
 
 #control-bar {
 
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
 }
 
