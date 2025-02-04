@@ -1,6 +1,6 @@
 <script setup>
 import { computed, defineProps, reactive, ref } from 'vue';
-import { Color, Euler, Vector3 } from 'three';
+import { Color } from 'three';
 import { is, Pointer, AXIS, RANGES, Range, PointSpace } from "@/vendor"
 
 import FancyElement from '../FancyElement.vue'
@@ -113,7 +113,7 @@ function updateTarget( target, pointer, params ) {
       return target
 
     case ORIGIN_TYPES.pointer:
-      return new Vector3().subVectors( target, pointer )
+      return new PointSpace().subVectors( target, pointer )
         .divideScalar( -params.scale_factor )
 
   }
