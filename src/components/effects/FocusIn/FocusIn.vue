@@ -20,16 +20,21 @@ const ORIGIN_TYPES = {
   pointer:    radius_type_enum++,
 }
 
+const DEFAULT_COLOUR_LERP_STEPS = 10
+
+const DEFAULT_INITIAL_RADIUS = 2500
+const DEFAULT_FINAL_RADIUS = 5
+
 const DEFAULTS = {
   colours: DEFAULT_COLOURS,
-  colour_steps: 10,
+  colour_steps: DEFAULT_COLOUR_LERP_STEPS,
   radius: {
-    initial: 2500,
-    final: 5
+    initial: DEFAULT_INITIAL_RADIUS,
+    final: DEFAULT_FINAL_RADIUS
   },
   origin: {
     type: ORIGIN_TYPES.pointer,
-    scale_factor: -2500,
+    scale_factor: -DEFAULT_INITIAL_RADIUS,
   },
   span: {
     initial: RANGES.relative.radians.min,
