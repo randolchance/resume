@@ -29,7 +29,9 @@ const focusInProps = ref( props.details.focusIn || {} )
       <template v-if="effect_enum === EFFECTS_ENUM.focusIn">
         <FocusIn class="button-label"
           :params="focusInProps"
-        ><slot></slot></FocusIn>
+        >
+          <slot></slot>
+        </FocusIn>
       </template>
       <!-- template v-else-if="effect_enum === EFFECTS_ENUM.focusIn">
         <FocusIn class="button-label">{{ label }}</FocusIn>
