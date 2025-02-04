@@ -3,7 +3,9 @@ import { reactive } from 'vue';
 import PageHeaderOption from './PageHeaderOption.vue';
 
 const options = reactive({
-
+  HOME: {
+    
+  }
 })
 
 </script>
@@ -13,8 +15,10 @@ const options = reactive({
     <PageHeaderOption
       v-for="label in options"
       :key="label"
-      :details="{ label, options: options[ label ] }"
-    />
+      :details="options[ label ]"
+    >
+      HOME
+    </PageHeaderOption>
   </header>
 </template>
 

@@ -1,14 +1,11 @@
 <script setup>
 import { defineProps } from 'vue';
 
+import { EFFECTS_ENUM } from '@/effects/effects';
+
 import CenteredElement from './CenteredElement.vue';
 import FocusIn from './effects/FocusIn/FocusIn.vue';
 
-let effects_enum = 1;
-const EFFECTS = {
-  focusIn:            effects_enum++,
-
-}
 
 const props = defineProps({
   details: {
@@ -17,8 +14,7 @@ const props = defineProps({
   },
 })
 
-const disable = ref( props.details.disable )
-const label = ref( props.details.label )
+const disable = ref( props.details.disable || false )
 const effect_enum = ref( props.details.effect )
 
 </script>
@@ -26,13 +22,13 @@ const effect_enum = ref( props.details.effect )
 <template>
   <a href="#" class="button-container">
     <template v-if="disable">
-      <CenteredElement class="button-label">{{ label }}</CenteredElement>
+      <CenteredElement class="button-label"><slot></slot></CenteredElement>
     </template>
     <template v-else>
-      <template v-if="effect_enum === EFFECTS.focusIn">
-        <FocusIn class="button-label">{{ label }}</FocusIn>
+      <template v-if="effect_enum === EFFECTS_ENUM.focusIn">
+        <FocusIn class="button-label"><slot></slot></FocusIn>
       </template>
-      <!-- template v-else-if="effect_enum === EFFECTS.focusIn">
+      <!-- template v-else-if="effect_enum === EFFECTS_ENUM.focusIn">
         <FocusIn class="button-label">{{ label }}</FocusIn>
       </template -->
     </template>
@@ -42,6 +38,9 @@ const effect_enum = ref( props.details.effect )
 <style scoped>
 
 .button-container {
+
+  width: 100%;
+  height: 100%;
 
 }
 

@@ -13,7 +13,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <FancyButton :details="details" />
+  <FancyButton :details="details">
+    <slot></slot>
+  </FancyButton>
 </template>
 
 <style scoped>
