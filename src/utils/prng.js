@@ -1,3 +1,5 @@
+const { floor } = Math;
+
 //  This config presumes epoch time is passed
 const DEFAULT_TIMESCALE = 100;  //  dSeed = 100ms
 const DEFAULT_PERIOD = 10000;   //  Number of possible outcomes
@@ -19,7 +21,7 @@ CONFIG.reset = function() {
 }
 
 function getSeedFromTime( time=Date.now(), period=CONFIG.period, scale=CONFIG.scale ) {
-  return time / scale % period;
+  return floor( time / scale ) % period;
 }
 
 function getSeedFromNow() {
