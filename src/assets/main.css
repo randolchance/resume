@@ -4,14 +4,14 @@
   --screen-width:           100vw;
   --screen-height:          100vh;
 
-  --dx: var(--screen-width);
-  --dy: var(--screen-height);
-  
+  --dx:                     var(--screen-width);
+  --dy:                     var(--screen-height);
+
 }
 
 body {
 
-  width: var(--dx);
-  height: var(--dy);
+  width:                    var(--dx);
+  height:                   var(--dy);
 
 }
