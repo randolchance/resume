@@ -51,15 +51,14 @@ const style = reactive({
 </script>
 
 <template>
-  <main
+  <div
     :style="style"
     spatial="on"
-    latch-hover="off"
   >
     <CenteredElement :x="element_origin_x" :y="element_origin_y">
       <slot></slot>
     </CenteredElement>
-  </main>
+  </div>
 </template>
 
 <style scoped>
@@ -141,15 +140,6 @@ const style = reactive({
   --scaled-r:                 calc( var(--scale) * var(--r) );
 
   transform:                  translate3d( var(--scaled-x), var(--scaled-y), var(--scaled-z) );
-
-}
-
-[latch-hover='on'] .latch {
-
-  --latch-factor:             calc( 2 * hypot( var(--dx) * 1px, var(--dy) * 1px ) );
-
-  width:                      var(--latch-factor);
-  height:                     var(--latch-factor);
 
 }
 

@@ -23,7 +23,7 @@ class FiniteTimeline extends CustomTimeline {
 
     }
 
-    this.dt = u * this.duration;
+    this.dt = new_u * this.duration;
 
   }
 

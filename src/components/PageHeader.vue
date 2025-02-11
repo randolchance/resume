@@ -2,9 +2,11 @@
 import { reactive } from 'vue';
 import PageHeaderOption from './PageHeaderOption.vue';
 
+import { EFFECTS_ENUM } from '@/effects/effects';
+
 const options = reactive({
   HOME: {
-
+    effect: EFFECTS_ENUM.focusIn,
   }
 })
 
@@ -13,11 +15,11 @@ const options = reactive({
 <template>
   <header id="control-bar">
     <PageHeaderOption
-      v-for="label in options"
-      :key="label"
-      :details="options[ label ]"
+      v-for="( option, key ) in options"
+      :key="key"
+      :details="option"
     >
-      {{ label }}
+      {{ key }}
     </PageHeaderOption>
   </header>
 </template>

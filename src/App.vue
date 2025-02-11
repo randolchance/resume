@@ -1,5 +1,6 @@
 <script setup>
 import PRNG from '@/utils/prng';
+import PageHeader from './components/PageHeader.vue';
 
 const rng_seeds = {}
 
@@ -27,9 +28,7 @@ window.onload = onWindowLoad
 </script>
 
 <template>
-  <main>
-    
-  </main>
+  <PageHeader></PageHeader>
 </template>
 
 <style scoped>

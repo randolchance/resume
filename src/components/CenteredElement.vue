@@ -21,26 +21,28 @@ const style = reactive({
 </script>
 
 <template>
-  <main centre="" :style="style">
+  <div centre :style="style">
     <slot></slot>
-  </main>
+  </div>
 </template>
 
 <style scoped>
 
 [centre] {
 
+  position: relative;
+
   --element-origin-x:         0px;
   --element-origin-y:         0px;
 
-  --left:                     calc( val(--element-origin-x) + 50% );
-  --top:                      calc( val(--element-origin-y) + 50% );
+  --left:                     calc( var(--element-origin-x) + 50% );
+  --top:                      calc( var(--element-origin-y) + 50% );
 
-  left:                       val(--left);
-  top:                        val(--top);
+  left:                       var(--left);
+  top:                        var(--top);
 
-  margin-left:                calc( -1 * val(--left) );
-  margin-top:                 calc( -1 * val(--top) );
+  margin-left:                -50%;
+  margin-top:                 -50%;
 
 }
 

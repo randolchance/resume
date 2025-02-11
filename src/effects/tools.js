@@ -120,10 +120,10 @@ function breakUpText( text, params ) {
     break;
   }
 
-  container = container || document.createElement('div');
-  container.classList.add( ...container_class_names );
-  container.append( ...layers );
-  return container;
+  const wrapper = container || document.createElement('div');
+  wrapper.classList.add( ...container_class_names );
+  wrapper.append( ...layers );
+  return wrapper;
 }
 
 function randomlyBreakUpElementContent( element, params ) {
@@ -224,8 +224,8 @@ function wrapWords( text, params ) {
 
   }
 
-  container = container || document.createElement('div');
-  container.classList.add( ...container_class_names );
+  const wrapper = container || document.createElement('div');
+  wrapper.classList.add( ...container_class_names );
 
   const elements = layers
     .filter( layer => layer.length > 0 )
@@ -236,8 +236,8 @@ function wrapWords( text, params ) {
       return element;
     } );
 
-  container.append( ...elements );
-  return container;
+  wrapper.append( ...elements );
+  return wrapper;
 }
 
 function wrapWordsOfElementContent( element, params ) {
@@ -354,10 +354,10 @@ function wrapLetters( text, params ) {
     wrap_spaces,
   } = params;
 
-  container = container || document.createElement('div');
-  container.classList.add( ...container_class_names );
+  const wrapper = container || document.createElement('div');
+  wrapper.classList.add( ...container_class_names );
 
-  container.innerHTML(
+  wrapper.innerHTML(
     [ ...text ]
       .map( letter => {
         return wrap_spaces || !isWhitespace( letter ) ?
@@ -367,7 +367,7 @@ function wrapLetters( text, params ) {
       .join('')
   );
 
-  return container;
+  return wrapper;
 }
 
 function wrapLettersOfElementContent( element, params ) {

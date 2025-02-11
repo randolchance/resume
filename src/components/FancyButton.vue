@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, ref } from 'vue';
 
 import { EFFECTS_ENUM } from '@/effects/effects';
 
@@ -15,8 +15,8 @@ const props = defineProps({
 })
 
 const effect_enum = ref( props.details.effect )
-const disable = ref( props.details.disable || Boolean( props.details.effect ) )
-const focusInProps = ref( props.details.focusIn || {} )
+const disable = ref( props.details.disable || !Boolean( props.details.effect ) )
+const focusInProps = ref( props.details.focusIn )
 
 </script>
 
@@ -44,7 +44,6 @@ const focusInProps = ref( props.details.focusIn || {} )
 
 .button-container {
 
-  width: 100%;
   height: 100%;
 
 }

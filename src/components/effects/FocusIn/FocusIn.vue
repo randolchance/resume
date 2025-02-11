@@ -1,55 +1,13 @@
 <script setup>
-import { computed, defineProps, reactive, ref } from 'vue';
+import { computed, defineProps, reactive, ref } from 'vue'
 import { Color } from 'three';
-import { is, Pointer, AXIS, RANGES, Range, PointSpace } from "@/vendor"
+import { is, Pointer, AXIS, RANGES, TAU, Range, PointSpace } from "@/vendor"
 
-import FancyElement from '../FancyElement.vue'
+import FancyElement from '../../FancyElement.vue'
 
 import FiniteTimeline from '@/effects/finite-timeline'
 
 
-const DEFAULT_COLOURS = [
-  { start: "#12B536", end: "#D5FBDD" },
-  { start: "#8712B5", end: "#F0D5FB" },
-  { start: "#B51240", end: "#FBD5E0" },
-]
-
-let radius_type_enum = 0
-const ORIGIN_TYPES = {
-  constant:   radius_type_enum++,
-  pointer:    radius_type_enum++,
-}
-
-const DEFAULT_COLOUR_LERP_STEPS = 10
-
-const DEFAULT_INITIAL_RADIUS = 2500
-const DEFAULT_FINAL_RADIUS = 5
-
-const DEFAULTS = {
-  colours: DEFAULT_COLOURS,
-  colour_steps: DEFAULT_COLOUR_LERP_STEPS,
-  radius: {
-    initial: DEFAULT_INITIAL_RADIUS,
-    final: DEFAULT_FINAL_RADIUS
-  },
-  origin: {
-    type: ORIGIN_TYPES.pointer,
-    scale_factor: -DEFAULT_INITIAL_RADIUS,
-  },
-  span: {
-    initial: RANGES.relative.radians.min,
-    final: RANGES.relative.radians.max
-  },
-  alpha: {
-    initial: 0,
-    final: 1
-  },
-  blur_factor: {
-    initial: 100,
-    final: 0
-  },
-  centreAxis: AXIS.Y,
-}
 
 
 const props = defineProps({
@@ -83,8 +41,8 @@ function lerpColours( start_hex, target_hex, steps ) {
 }
 
 const steppedColourHexes = []
-function createColourHexes( colourHexes=DEFAULTS.colours, steps=DEFAULTS.colour_steps ) {
-  steppedColourHexes.splice( 0, Infinity, ...colourHexes.map(
+function createColourHexes( hexes=DEFAULTS.colours, steps=DEFAULTS.colour_steps ) {
+  steppedColourHexes.splice( 0, Infinity, ...hexes.map(
     ({ start, end }) => lerpColours( start, end, steps )
   ) )
 
@@ -95,7 +53,7 @@ const steppedColourVectors = []
 function createColourVectors( direction_count, centre=DEFAULTS.centreAxis, span=DEFAULTS.span ) {
   const spanRange = new Range( span.initial, span.final )
   const include_last = is.near( spanRange.size, TAU, 0.001 )
-  const vectors = span.through( direction_count, { include_last } )
+  const vectors = spanRange.through( direction_count, { include_last } )
     .map( angle => [ 1, 0, angle ] )
 
   steppedColourVectors.splice( 0, Infinity, ...vectors )
@@ -103,7 +61,7 @@ function createColourVectors( direction_count, centre=DEFAULTS.centreAxis, span=
   return steppedColourVectors
 }
 
-const colourHexes = computed( () => createColourHexes( params ) )
+const colourHexes = computed( () => createColourHexes( params.colours ) )
 const startColourHexes = computed( () => colourHexes.value.at(0) )
 const colourVectors = computed( () => {
   const { centreAxis, span } = params
@@ -135,7 +93,7 @@ function animateElement( event ) {
 
   const pointer = new Pointer( event, true )
   const pointerPointSpace = new PointSpace( pointer )
-    .multiplyVectors( bodyCoordinates )
+    .multiply( bodyCoordinates )
 
   const mainElement = event.target
   const targetPosition = mainElement.getBoundingClientRect()
@@ -252,6 +210,53 @@ const classes = computed( () => {
 
 </script>
 
+<script>
+
+const DEFAULT_COLOURS = [
+  { start: "#12B536", end: "#D5FBDD" },
+  { start: "#8712B5", end: "#F0D5FB" },
+  { start: "#B51240", end: "#FBD5E0" },
+]
+
+let radius_type_enum = 0
+const ORIGIN_TYPES = {
+  constant:   radius_type_enum++,
+  pointer:    radius_type_enum++,
+}
+
+const DEFAULT_COLOUR_LERP_STEPS = 10
+
+const DEFAULT_INITIAL_RADIUS = 2500
+const DEFAULT_FINAL_RADIUS = 5
+
+const DEFAULTS = {
+  colours: DEFAULT_COLOURS,
+  colour_steps: DEFAULT_COLOUR_LERP_STEPS,
+  radius: {
+    initial: DEFAULT_INITIAL_RADIUS,
+    final: DEFAULT_FINAL_RADIUS
+  },
+  origin: {
+    type: ORIGIN_TYPES.pointer,
+    scale_factor: -DEFAULT_INITIAL_RADIUS,
+  },
+  span: {
+    initial: RANGES.relative.radians.min,
+    final: RANGES.relative.radians.max
+  },
+  alpha: {
+    initial: 0,
+    final: 1
+  },
+  blur_factor: {
+    initial: 100,
+    final: 0
+  },
+  centreAxis: AXIS.Y,
+}
+
+</script>
+
 <template>
   <FancyElement
     latch-hover="on"
@@ -268,12 +273,15 @@ const classes = computed( () => {
 
       v-for="i in params.colours.length"
       :element-index="i"
-      :--phi="colourVectors.at( i ).at(1)"
-      :--theta="colourVectors.at( i ).at(2)"
+      :style="{
+        '--phi': colourVectors.at( i ).at(1),
+        '--theta': colourVectors.at( i ).at(2),
+      }"
       :class="`focus-in-layer-${ i }`"
     >
       <slot></slot>
     </FancyElement>
+    <slot></slot>
   </FancyElement>
 </template>
 
