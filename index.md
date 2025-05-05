@@ -1,6 +1,6 @@
-# DANIEL COOK - Lead Software Engineer
+# DANIEL COOK - Software Engineer
 ### [dan.c.cook@gmail.com](mailto:dan.c.cook@gmail.com) - [519-373-4042](tel:15193734042) - [github.com/randolchance](https://github.com/randolchance)
-##### Port Elgin, ON Canada
+##### Walkerton, ON Canada
 
 # Skills
 
@@ -128,7 +128,7 @@
 
 ## Relevant Work Experience
 
-### KP9 Interactive (Oct 2018 - Present)
+### KP9 Interactive (Oct 2018 - Jan 2025)
 #### Web Engineer
 
 ##### WorldCAST WebAR Studio Content Management System and User Portals
