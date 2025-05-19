@@ -36,7 +36,7 @@
 ### Rumble Automation (Sep - Dec 2002)
 #### Junior Draftsperson and Technician
 - Drafted electrical and pneumatic schematics under tight time constraints
-- Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances with confidenc and accuracy
+- Programmed PLCs and robotic controllers under high-pressure, high-stakes circumstances with confidence and accuracy
 
 ## Formal Education
 
